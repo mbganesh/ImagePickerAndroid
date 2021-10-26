@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <item android:id="@+id/b_nav_salwar"
+        android:title="Sleeve Patterns"
+        android:icon="@drawable/ic_temp"/>
+
+    <item android:id="@+id/b_nav_blouse"
+        android:title="Work Blouse Patterns"
+        android:icon="@drawable/ic_temp"/>
+
+    <item android:id="@+id/b_nav_neck"
+        android:title="Neck Patterns"
+        android:icon="@drawable/ic_temp"/>
+
+</menu>

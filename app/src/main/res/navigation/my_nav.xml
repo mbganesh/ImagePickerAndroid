@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/my_nav"
+    app:startDestination="@id/home_fragment">
+
+    <fragment
+        android:id="@+id/home_fragment"
+        android:name="mb.ganesh.imagepickerapp.patterns.SalwarFragment"
+        android:label="Sleeve Patterns"
+        tools:layout="@layout/fragment_salwar" />
+    <fragment
+        android:id="@+id/search_fragment"
+        android:name="mb.ganesh.imagepickerapp.patterns.BlouseFragment"
+        android:label="Work Blouse Patterns"
+        tools:layout="@layout/fragment_blouse" />
+    <fragment
+        android:id="@+id/notification_fragment"
+        android:name="mb.ganesh.imagepickerapp.patterns.SleeveFragment"
+        android:label="Neck Patterns"
+        tools:layout="@layout/fragment_sleeve" />
+
+</navigation>
