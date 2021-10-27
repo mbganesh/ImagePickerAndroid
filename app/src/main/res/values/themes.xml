@@ -23,6 +23,14 @@
         <item name="colorControlNormal">@color/white</item>
     </style>
 
+    <style name="Theme.ImagePickerApp.NoActionBar">
+        <item name="windowActionBar">false</item>
+        <item name="windowNoTitle">true</item>
+    </style>
+
+    <style name="Theme.ImagePickerApp.AppBarOverlay" parent="ThemeOverlay.AppCompat.Dark.ActionBar" />
+
+    <style name="Theme.ImagePickerApp.PopupOverlay" parent="ThemeOverlay.AppCompat.Light" />
 
 
 </resources>

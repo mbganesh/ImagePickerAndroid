@@ -43,17 +43,39 @@ public class MyRecyclerViewAdapter extends RecyclerView.Adapter<MyRecyclerViewAd
     @Override
     public void onBindViewHolder(@NonNull MyViewHolder holder, int position) {
 
+        String string = allFiles[position].toString();
+        String[] parts = string.split("/");
+        String titleWithExt = parts[6];
+        String[] titleTemp = titleWithExt.split("\\.");
+
+
+        String[] title = titleTemp[0].split("-");
+//
+//        for (int i = 0; i < title.length; i++) {
+//            Log.e("Temp : " + i , title[i]);
+//        }
+
+
+        holder.myId.setText(title[0]);
+        holder.myPrice.setText("₹ "+title[1]);
+
         Bitmap bmImg = BitmapFactory.decodeFile(allFiles[position].toString());
         holder.myImage.setImageBitmap(bmImg);
 
-        String string = allFiles[position].toString();
-        String[] parts = string.split("/");
+        holder.myImage.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Bitmap bmImgTemp = BitmapFactory.decodeFile(allFiles[position].toString());
+                String string = allFiles[position].toString();
+                String[] parts = string.split("/");
+                String titleWithExt = parts[6];
+                String[] title = titleWithExt.split("\\.");
 
-        String titleWithExt = parts[6];
+                PopUpClass popUpClass = new PopUpClass(bmImgTemp , title[0] );
+                popUpClass.showPopupWindow(view);
+            }
+        });
 
-        String[] title = titleWithExt.split("\\.");
-
-        holder.myTitle.setText(title[0]);
 
     }
 
@@ -65,13 +87,14 @@ public class MyRecyclerViewAdapter extends RecyclerView.Adapter<MyRecyclerViewAd
     public class MyViewHolder extends RecyclerView.ViewHolder {
 
         ImageView myImage;
-        TextView myTitle;
+        TextView myId , myPrice;
 
 
         public MyViewHolder(@NonNull View itemView) {
             super(itemView);
             myImage = itemView.findViewById(R.id.myImage);
-            myTitle = itemView.findViewById(R.id.myTitle);
+            myId = itemView.findViewById(R.id.myId);
+            myPrice = itemView.findViewById(R.id.myPrice);
         }
     }
 }
