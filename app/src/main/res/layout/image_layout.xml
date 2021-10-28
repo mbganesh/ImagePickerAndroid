@@ -11,6 +11,7 @@
         android:layout_width="250dp"
         android:layout_height="wrap_content"
         android:clickable="true"
+        android:id="@+id/myCard"
         android:contextClickable="true"
         app:cardCornerRadius="10dp"
         app:cardElevation="10dp"
@@ -19,7 +20,7 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
         app:strokeColor="@color/secondary_color"
-        app:strokeWidth="2dp">
+        app:strokeWidth="5dp">
 
         <androidx.constraintlayout.widget.ConstraintLayout
             android:layout_width="match_parent"
@@ -27,6 +28,7 @@
 
             <TextView
                 android:id="@+id/myId"
+                android:textAllCaps="true"
                 android:layout_width="0dp"
                 android:layout_height="wrap_content"
                 android:background="@color/secondary_color"

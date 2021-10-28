@@ -7,6 +7,7 @@ import androidx.recyclerview.widget.GridLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
 
 import android.os.Environment;
+import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -17,23 +18,29 @@ import java.io.FilenameFilter;
 import mb.ganesh.imagepickerapp.MyRecyclerViewAdapter;
 import mb.ganesh.imagepickerapp.R;
 
-public class SalwarFragment extends Fragment {
+public class NeckFragment extends Fragment {
+
+//    NECK
 
     RecyclerView recyclerView;
     MyRecyclerViewAdapter adapter;
 
+    String crl ="";
 
 
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
         // Inflate the layout for this fragment
-        View view =  inflater.inflate(R.layout.fragment_salwar, container, false);
+        View view =  inflater.inflate(R.layout.fragment_neck, container, false);
 
+
+        crl = getArguments() != null ? getArguments().getString("colorCode") : null;
+        Log.e("Color Neck Fragment"  , crl+"");
 
         recyclerView = view.findViewById(R.id.recyclerViewSPId);
         recyclerView.setLayoutManager(new GridLayoutManager(getContext() , 3));
-        loadPatterns("/Patterns/SPatterns/");
+        loadPatterns("/Patterns/NPatterns/");
 
         return  view;
     }
@@ -41,11 +48,6 @@ public class SalwarFragment extends Fragment {
 
 
     private void loadPatterns(String path) {
-
-//        recyclerView = findViewById(R.id.recyclerViewId);
-//        recyclerView.setLayoutManager(new GridLayoutManager(this , 2));
-//
-//        loadPatterns("/Patterns/NPatterns/");
 
         File folder = new File(Environment.getExternalStorageDirectory().toString() + path);  // SPatterns    WPatterns
         folder.mkdirs();
@@ -55,7 +57,7 @@ public class SalwarFragment extends Fragment {
             }
         });
 
-        adapter = new MyRecyclerViewAdapter(getContext(), allFiles);
+        adapter = new MyRecyclerViewAdapter(getContext(), allFiles , crl);
         recyclerView.setAdapter(adapter);
 
     }

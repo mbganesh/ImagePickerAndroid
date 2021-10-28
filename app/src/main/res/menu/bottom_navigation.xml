@@ -1,16 +1,18 @@
 <?xml version="1.0" encoding="utf-8"?>
 <menu xmlns:android="http://schemas.android.com/apk/res/android">
 
-    <item android:id="@+id/b_nav_salwar"
-        android:title="Sleeve Patterns"
-        android:icon="@drawable/ic_sleeve_nav"/>
-
-    <item android:id="@+id/b_nav_blouse"
-        android:title="Work Blouse Patterns"
-        android:icon="@drawable/ic_blouse_nav"/>
-
     <item android:id="@+id/b_nav_neck"
         android:title="Neck Patterns"
         android:icon="@drawable/ic_neck_nav"/>
+
+    <item android:id="@+id/b_nav_sleeve"
+        android:title="Sleeve Patterns"
+        android:icon="@drawable/ic_sleeve_nav"/>
+
+    <item android:id="@+id/b_nav_work_blouse"
+        android:title="Work Blouse Patterns"
+        android:icon="@drawable/ic_work_blouse_nav"/>
+
+
 
 </menu>

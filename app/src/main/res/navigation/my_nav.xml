@@ -7,14 +7,14 @@
 
     <fragment
         android:id="@+id/home_fragment"
-        android:name="mb.ganesh.imagepickerapp.patterns.SalwarFragment"
+        android:name="mb.ganesh.imagepickerapp.patterns.NeckFragment"
         android:label="Sleeve Patterns"
-        tools:layout="@layout/fragment_salwar" />
+        tools:layout="@layout/fragment_neck" />
     <fragment
         android:id="@+id/search_fragment"
-        android:name="mb.ganesh.imagepickerapp.patterns.BlouseFragment"
+        android:name="mb.ganesh.imagepickerapp.patterns.WorkBlouseFragment"
         android:label="Work Blouse Patterns"
-        tools:layout="@layout/fragment_blouse" />
+        tools:layout="@layout/fragment_work_blouse" />
     <fragment
         android:id="@+id/notification_fragment"
         android:name="mb.ganesh.imagepickerapp.patterns.SleeveFragment"

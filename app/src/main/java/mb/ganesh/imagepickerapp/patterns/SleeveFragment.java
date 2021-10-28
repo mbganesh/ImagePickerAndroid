@@ -7,6 +7,7 @@ import androidx.recyclerview.widget.GridLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
 
 import android.os.Environment;
+import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -20,15 +21,20 @@ import mb.ganesh.imagepickerapp.R;
 public class SleeveFragment extends Fragment {
 
 
+//    Sleeve
+
+
     RecyclerView recyclerView;
     MyRecyclerViewAdapter adapter;
-
+    String crl ="";
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
         // Inflate the layout for this fragment
         View view =  inflater.inflate(R.layout.fragment_sleeve, container, false);
 
+        crl = getArguments() != null ? getArguments().getString("colorCode") : null;
+        Log.e("Color Sleeve Fragment"  , crl+"");
 
         recyclerView = view.findViewById(R.id.recyclerViewSleevePId);
         recyclerView.setLayoutManager(new GridLayoutManager(getContext() , 3));
@@ -50,7 +56,7 @@ public class SleeveFragment extends Fragment {
             }
         });
 
-        adapter = new MyRecyclerViewAdapter(getContext(), allFiles);
+        adapter = new MyRecyclerViewAdapter(getContext(), allFiles , crl);
         recyclerView.setAdapter(adapter);
 
     }
