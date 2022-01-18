@@ -7,7 +7,7 @@
 
 
     // getImage
-        File folder = new File(Environment.getExternalStorageDirectory().toString() + path);  // SPatterns    WPatterns ( Work Blouse )
+        File folder = new File(Environment.getExternalStorageDirectory().toString() + path);  // file path
         folder.mkdirs();
         File[] allFiles = folder.listFiles(new FilenameFilter() {
             public boolean accept(File dir, String name) {
