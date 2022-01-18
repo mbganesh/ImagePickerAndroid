@@ -1,16 +1,15 @@
 package mb.ganesh.imagepickerapp.patterns;
 
 import android.os.Bundle;
-
-import androidx.fragment.app.Fragment;
-import androidx.recyclerview.widget.GridLayoutManager;
-import androidx.recyclerview.widget.RecyclerView;
-
 import android.os.Environment;
 import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+
+import androidx.fragment.app.Fragment;
+import androidx.recyclerview.widget.GridLayoutManager;
+import androidx.recyclerview.widget.RecyclerView;
 
 import java.io.File;
 import java.io.FilenameFilter;
@@ -18,8 +17,9 @@ import java.io.FilenameFilter;
 import mb.ganesh.imagepickerapp.MyRecyclerViewAdapter;
 import mb.ganesh.imagepickerapp.R;
 
+public class SalwarSleeveFragment extends Fragment {
 
-public class WorkBlouseFragment extends Fragment {
+    //    Salwar Sleeve
 
     RecyclerView recyclerView;
     MyRecyclerViewAdapter adapter;
@@ -32,14 +32,12 @@ public class WorkBlouseFragment extends Fragment {
         crl = getArguments() != null ? getArguments().getString("colorCode") : null;
         recyclerView = view.findViewById(R.id.recyclerViewBPId);
         recyclerView.setLayoutManager(new GridLayoutManager(getContext() , 3));
-        loadPatterns("/Patterns/WBPatterns/");       // change path
+        loadPatterns("/Patterns/SSPatterns/");  // change path
         return  view;
     }
-
     private void loadPatterns(String path) {
         LoadPatterns loadPatterns = new LoadPatterns();
         adapter = new MyRecyclerViewAdapter(getContext(), loadPatterns.loadPatternss(path) , crl);
         recyclerView.setAdapter(adapter);
     }
 }
-

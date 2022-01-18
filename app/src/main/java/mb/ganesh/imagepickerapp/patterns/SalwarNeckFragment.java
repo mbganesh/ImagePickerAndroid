@@ -18,46 +18,29 @@ import java.io.FilenameFilter;
 import mb.ganesh.imagepickerapp.MyRecyclerViewAdapter;
 import mb.ganesh.imagepickerapp.R;
 
-public class SleeveFragment extends Fragment {
 
+public class SalwarNeckFragment extends Fragment {
 
-//    Sleeve
-
+    //    Salwar Neck
 
     RecyclerView recyclerView;
     MyRecyclerViewAdapter adapter;
     String crl ="";
+
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
-        // Inflate the layout for this fragment
-        View view =  inflater.inflate(R.layout.fragment_sleeve, container, false);
-
+        View view =  inflater.inflate(R.layout.fragment_work_blouse, container, false);
         crl = getArguments() != null ? getArguments().getString("colorCode") : null;
-        Log.e("Color Sleeve Fragment"  , crl+"");
-
-        recyclerView = view.findViewById(R.id.recyclerViewSleevePId);
+        recyclerView = view.findViewById(R.id.recyclerViewBPId);
         recyclerView.setLayoutManager(new GridLayoutManager(getContext() , 3));
-        loadPatterns("/Patterns/SPatterns/");
-
+        loadPatterns("/Patterns/SNPatterns/"); // change path
         return  view;
     }
 
-
-
     private void loadPatterns(String path) {
-
-
-        File folder = new File(Environment.getExternalStorageDirectory().toString() + path);  // SPatterns    WPatterns ( Work Blouse )
-        folder.mkdirs();
-        File[] allFiles = folder.listFiles(new FilenameFilter() {
-            public boolean accept(File dir, String name) {
-                return (name.endsWith(".jpg") || name.endsWith(".jpeg") || name.endsWith(".png"));
-            }
-        });
-
-        adapter = new MyRecyclerViewAdapter(getContext(), allFiles , crl);
+        LoadPatterns loadPatterns = new LoadPatterns();
+        adapter = new MyRecyclerViewAdapter(getContext(), loadPatterns.loadPatternss(path) , crl);
         recyclerView.setAdapter(adapter);
-
     }
 }

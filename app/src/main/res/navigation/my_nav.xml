@@ -3,22 +3,34 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:id="@+id/my_nav"
-    app:startDestination="@id/home_fragment">
+    app:startDestination="@id/sn_fragment">
 
     <fragment
-        android:id="@+id/home_fragment"
-        android:name="mb.ganesh.imagepickerapp.patterns.NeckFragment"
-        android:label="Sleeve Patterns"
-        tools:layout="@layout/fragment_neck" />
+        android:id="@+id/bn_fragment"
+        android:name="mb.ganesh.imagepickerapp.patterns.BlouseNeckFragment"
+        android:label="Blouse Neck"
+        tools:layout="@layout/fragment_work_blouse" />
     <fragment
-        android:id="@+id/search_fragment"
+        android:id="@+id/bs_fragment"
+        android:name="mb.ganesh.imagepickerapp.patterns.BlouseSleeveFragment"
+        android:label="Work Sleeve Patterns"
+        tools:layout="@layout/fragment_work_blouse" />
+    <fragment
+        android:id="@+id/sn_fragment"
+        android:name="mb.ganesh.imagepickerapp.patterns.SalwarNeckFragment"
+        android:label="Salwar Neck Patterns"
+        tools:layout="@layout/fragment_work_blouse" />
+
+    <fragment
+        android:id="@+id/ss_fragment"
+        android:name="mb.ganesh.imagepickerapp.patterns.SalwarSleeveFragment"
+        android:label="Salwar Sleeve Patterns"
+        tools:layout="@layout/fragment_work_blouse" />
+
+    <fragment
+        android:id="@+id/wb_fragment"
         android:name="mb.ganesh.imagepickerapp.patterns.WorkBlouseFragment"
         android:label="Work Blouse Patterns"
         tools:layout="@layout/fragment_work_blouse" />
-    <fragment
-        android:id="@+id/notification_fragment"
-        android:name="mb.ganesh.imagepickerapp.patterns.SleeveFragment"
-        android:label="Neck Patterns"
-        tools:layout="@layout/fragment_sleeve" />
 
 </navigation>

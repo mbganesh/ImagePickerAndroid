@@ -13,9 +13,11 @@ import android.view.WindowManager;
 import com.google.android.material.bottomnavigation.BottomNavigationView;
 import com.google.android.material.navigation.NavigationBarView;
 
+import mb.ganesh.imagepickerapp.patterns.BlouseNeckFragment;
+import mb.ganesh.imagepickerapp.patterns.BlouseSleeveFragment;
+import mb.ganesh.imagepickerapp.patterns.SalwarNeckFragment;
+import mb.ganesh.imagepickerapp.patterns.SalwarSleeveFragment;
 import mb.ganesh.imagepickerapp.patterns.WorkBlouseFragment;
-import mb.ganesh.imagepickerapp.patterns.SleeveFragment;
-import mb.ganesh.imagepickerapp.patterns.NeckFragment;
 
 
 public class MainActivity extends AppCompatActivity {
@@ -40,23 +42,33 @@ public class MainActivity extends AppCompatActivity {
                 Fragment fragment = null;
                 Bundle bundle = new Bundle();
                 switch (item.getItemId()) {
-                    case R.id.b_nav_neck:
-//                        Bundle bundle3 = new Bundle();
-                        bundle.putString("colorCode", "#FF0075");
-                        fragment = new NeckFragment();
+                    case R.id.b_nav_salwar_neck:
+                        bundle.putString("colorCode", "#0F00FF");       // init load color
+                        fragment = new SalwarNeckFragment();
+                        fragment.setArguments(bundle);
+                        break;
+
+                    case R.id.b_nav_salwar_sleeve:
+                        bundle.putString("colorCode", "#00adb5");       // init load color
+                        fragment = new SalwarSleeveFragment();
+                        fragment.setArguments(bundle);
+                        break;
+
+                    case R.id.b_nav_blouse_neck:
+                        bundle.putString("colorCode", "#FFC900");       // init load color
+                        fragment = new BlouseNeckFragment();
+                        fragment.setArguments(bundle);
+                        break;
+
+                    case R.id.b_nav_blouse_sleeve:
+                        bundle.putString("colorCode", "#EF2F88");       // init load color
+                        fragment = new BlouseSleeveFragment();
                         fragment.setArguments(bundle);
                         break;
 
                     case R.id.b_nav_work_blouse:
-
-                        bundle.putString("colorCode", "#9C19E0");
+                        bundle.putString("colorCode", "#7900FF");       // init load color
                         fragment = new WorkBlouseFragment();
-                        fragment.setArguments(bundle);
-                        break;
-                    case R.id.b_nav_sleeve:
-//                        Bundle bundle2 = new Bundle();
-                        bundle.putString("colorCode", "#0F00FF");       // init load color
-                        fragment = new SleeveFragment();
                         fragment.setArguments(bundle);
                         break;
 

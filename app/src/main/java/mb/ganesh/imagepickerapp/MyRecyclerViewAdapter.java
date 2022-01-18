@@ -47,21 +47,15 @@ public class MyRecyclerViewAdapter extends RecyclerView.Adapter<MyRecyclerViewAd
     @Override
     public void onBindViewHolder(@NonNull MyViewHolder holder, int position) {
 
-        if(crl != null){
-            Log.e("RecCode" , crl+"");
-
-        }else {
+        if(crl == null){
             crl = "#FF0075";
         }
-
-
 
         String string = allFiles[position].toString();
         String[] parts = string.split("/");
         String titleWithExt = parts[6];
         String[] titleTemp = titleWithExt.split("\\.");
         String[] title = titleTemp[0].split("-");
-
 
         holder.myId.setText(title[0]);
         holder.myPrice.setText("₹ "+title[1]);
@@ -82,8 +76,6 @@ public class MyRecyclerViewAdapter extends RecyclerView.Adapter<MyRecyclerViewAd
                 popUpClass.showPopupWindow(view);
             }
         });
-
-
 
         holder.myId.setBackgroundColor(Color.parseColor(crl));
         holder.myPrice.setBackgroundColor(Color.parseColor(crl));

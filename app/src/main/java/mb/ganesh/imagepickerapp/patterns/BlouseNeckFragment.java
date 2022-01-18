@@ -1,16 +1,15 @@
 package mb.ganesh.imagepickerapp.patterns;
 
 import android.os.Bundle;
-
-import androidx.fragment.app.Fragment;
-import androidx.recyclerview.widget.GridLayoutManager;
-import androidx.recyclerview.widget.RecyclerView;
-
 import android.os.Environment;
 import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+
+import androidx.fragment.app.Fragment;
+import androidx.recyclerview.widget.GridLayoutManager;
+import androidx.recyclerview.widget.RecyclerView;
 
 import java.io.File;
 import java.io.FilenameFilter;
@@ -18,8 +17,9 @@ import java.io.FilenameFilter;
 import mb.ganesh.imagepickerapp.MyRecyclerViewAdapter;
 import mb.ganesh.imagepickerapp.R;
 
+public class BlouseNeckFragment extends Fragment {
 
-public class WorkBlouseFragment extends Fragment {
+    //    Blouse Neck
 
     RecyclerView recyclerView;
     MyRecyclerViewAdapter adapter;
@@ -29,10 +29,12 @@ public class WorkBlouseFragment extends Fragment {
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
         View view =  inflater.inflate(R.layout.fragment_work_blouse, container, false);
+
         crl = getArguments() != null ? getArguments().getString("colorCode") : null;
+
         recyclerView = view.findViewById(R.id.recyclerViewBPId);
         recyclerView.setLayoutManager(new GridLayoutManager(getContext() , 3));
-        loadPatterns("/Patterns/WBPatterns/");       // change path
+        loadPatterns("/Patterns/BNPatterns/"); // change path
         return  view;
     }
 
@@ -42,4 +44,3 @@ public class WorkBlouseFragment extends Fragment {
         recyclerView.setAdapter(adapter);
     }
 }
-

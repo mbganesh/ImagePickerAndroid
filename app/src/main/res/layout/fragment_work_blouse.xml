@@ -12,5 +12,4 @@
         tools:listitem="@layout/image_layout"
         android:id="@+id/recyclerViewBPId"/>
 
-
 </FrameLayout>

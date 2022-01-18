@@ -2,26 +2,28 @@ package mb.ganesh.imagepickerapp;
 
 import android.graphics.Bitmap;
 import android.graphics.Color;
+import android.graphics.Interpolator;
 import android.util.Log;
 import android.view.Gravity;
 import android.view.LayoutInflater;
 import android.view.MotionEvent;
+import android.view.ScaleGestureDetector;
 import android.view.View;
 import android.widget.ImageView;
-import android.widget.LinearLayout;
 import android.widget.PopupWindow;
 import android.widget.TextView;
-import android.widget.Toast;
 
 import androidx.appcompat.app.AppCompatDelegate;
-import androidx.constraintlayout.widget.ConstraintLayout;
 
-import com.google.android.material.button.MaterialButton;
+import com.zolad.zoominimageview.ZoomInImageViewAttacher;
+
 public class PopUpClass {
 
     Bitmap bitmap;
     String title;
     String crl;
+    ZoomInImageViewAttacher img;
+
 
     public PopUpClass(Bitmap bitmap, String title, String crl) {
         this.bitmap = bitmap;
@@ -34,7 +36,6 @@ public class PopUpClass {
         View popupView = inflater.inflate(R.layout.pop_up_layout, null);
         AppCompatDelegate.setDefaultNightMode(AppCompatDelegate.MODE_NIGHT_NO);
 
-        Log.e("PopUp"  , crl);
 
         int width = 700;
         int height = 850;
@@ -46,8 +47,18 @@ public class PopUpClass {
 
         ImageView btn = popupView.findViewById(R.id.closeBtnPop);
 
-        ImageView img = popupView.findViewById(R.id.popUpImage);
-        img.setImageBitmap(bitmap);
+//        img = popupView.findViewById(R.id.popUpImage);
+
+
+        ImageView imageView = popupView.findViewById(R.id.popUpImage) ;
+        imageView.setImageBitmap(bitmap);
+        img = new ZoomInImageViewAttacher();
+        img.setZoomReleaseAnimDuration(2000);
+        img.attachImageView(imageView);
+
+//         scaleGestureDetector = new ScaleGestureDetector(view.getContext(),new ScaleListner());
+
+//        img.setImageBitmap(bitmap);
 
         String[] titles = title.split("-");
 
@@ -74,5 +85,19 @@ public class PopUpClass {
                 return true;
             }
         });
+//
+//
+//        view.setOnTouchListener(new View.OnTouchListener() {
+//            @Override
+//            public boolean onTouch(View view, MotionEvent event) {
+//                scaleGestureDetector.onTouchEvent(event);
+//                return true;
+//            }
+//        });
+//
+
     }
+
+
 }
+
