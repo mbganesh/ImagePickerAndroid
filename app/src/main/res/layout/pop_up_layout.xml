@@ -52,12 +52,14 @@
                 app:layout_constraintStart_toEndOf="@+id/patternIdPop"
                 app:layout_constraintTop_toTopOf="parent" />
 
-            <com.zolad.zoominimageview.ZoomInImageView
+
+<!--            android:scaleType="fitXY"-->
+            <com.jsibbold.zoomage.ZoomageView
                 android:id="@+id/popUpImage"
                 android:layout_width="match_parent"
                 android:layout_height="0dp"
                 android:background="@drawable/gradient_bg"
-                android:scaleType="fitXY"
+
                 app:layout_constraintBottom_toTopOf="@+id/patternIdPricePop"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintStart_toStartOf="parent"

@@ -33,6 +33,12 @@ public class BlouseNeckFragment extends Fragment {
         crl = getArguments() != null ? getArguments().getString("colorCode") : null;
 
         recyclerView = view.findViewById(R.id.recyclerViewBPId);
+        // new
+        recyclerView.setHasFixedSize(true);
+        recyclerView.setItemViewCacheSize(20);
+        recyclerView.setDrawingCacheEnabled(true);
+        recyclerView.setDrawingCacheQuality(View.DRAWING_CACHE_QUALITY_HIGH);
+
         recyclerView.setLayoutManager(new GridLayoutManager(getContext() , 3));
         loadPatterns("/Patterns/BNPatterns/"); // change path
         return  view;
@@ -41,6 +47,8 @@ public class BlouseNeckFragment extends Fragment {
     private void loadPatterns(String path) {
         LoadPatterns loadPatterns = new LoadPatterns();
         adapter = new MyRecyclerViewAdapter(getContext(), loadPatterns.loadPatternss(path) , crl);
+        adapter.setHasStableIds(true);          // new
         recyclerView.setAdapter(adapter);
+
     }
 }

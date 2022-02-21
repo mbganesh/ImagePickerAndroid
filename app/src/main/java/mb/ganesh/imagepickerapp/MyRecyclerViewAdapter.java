@@ -20,6 +20,7 @@ import org.json.JSONObject;
 import org.w3c.dom.Text;
 
 import java.io.File;
+import java.io.InputStream;
 import java.util.ArrayList;
 
 public class MyRecyclerViewAdapter extends RecyclerView.Adapter<MyRecyclerViewAdapter.MyViewHolder> {
@@ -38,9 +39,7 @@ public class MyRecyclerViewAdapter extends RecyclerView.Adapter<MyRecyclerViewAd
     @Override
     public MyViewHolder onCreateViewHolder(@NonNull ViewGroup parent, int viewType) {
         LayoutInflater layoutInflater = LayoutInflater.from(parent.getContext());
-
         View view = layoutInflater.inflate(R.layout.image_layout, parent, false);
-
         return new MyViewHolder(view);
     }
 
@@ -59,6 +58,12 @@ public class MyRecyclerViewAdapter extends RecyclerView.Adapter<MyRecyclerViewAd
 
         holder.myId.setText(title[0]);
         holder.myPrice.setText("₹ "+title[1]);
+
+
+//        InputStream is = (InputStream) url.getContent();
+//        BitmapFactory.Options options = new BitmapFactory.Options();
+//        options.inPreferredConfig = Bitmap.Config.RGB_565;
+
 
         Bitmap bmImg = BitmapFactory.decodeFile(allFiles[position].toString());
         holder.myImage.setImageBitmap(bmImg);
