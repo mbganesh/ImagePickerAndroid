@@ -13,9 +13,12 @@
     <color name="red">#E02401</color>
     <color name="primary_color">#E26A2C</color>
     <color name="secondary_color">#161E54</color>
-    
-    
+
+
     <color name="salwarColor">#00a19d</color>
     <color name="blouseColor">#6f69ac</color>
+
+
+    <color name="netcom_bg">#EFEFEF</color>
 
 </resources>

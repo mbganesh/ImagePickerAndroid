@@ -1,5 +1,5 @@
 <resources>
-    <string name="app_name">Shivane`s Designing Patterns</string>
+    <string name="app_name">Shivane\'s Designing Patterns</string>
     <string name="title_activity_splash">SplashActivity</string>
     <!-- Strings used for fragments for navigation -->
     <string name="first_fragment_label">First Fragment</string>
@@ -14,8 +14,8 @@
 
 
 
-<!--  ImageLoaderLib:    https://github.com/nostra13/Android-Universal-Image-Loader          -->
+    <!--  ImageLoaderLib:    https://github.com/nostra13/Android-Universal-Image-Loader          -->
 
-<!--    https://icons.veryicon.com/png/o/education-technology/alibaba-big-data-oneui/image-loading-failed-01.png            -->
-<!--    https://www.trroofingsheets.co.uk/wp-content/uploads/2016/05/default-no-image-1.png                 -->
+    <!--    https://icons.veryicon.com/png/o/education-technology/alibaba-big-data-oneui/image-loading-failed-01.png            -->
+    <!--    https://www.trroofingsheets.co.uk/wp-content/uploads/2016/05/default-no-image-1.png                 -->
 </resources>

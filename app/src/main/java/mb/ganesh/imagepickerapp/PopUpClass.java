@@ -36,8 +36,8 @@ public class PopUpClass {
         AppCompatDelegate.setDefaultNightMode(AppCompatDelegate.MODE_NIGHT_NO);
 
 
-        int width = 900;
-        int height = 1200;
+        int width = 1000;
+        int height = 1400;
 
 //        int width = 700;
 //        int height = 850;

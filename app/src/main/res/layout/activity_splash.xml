@@ -25,7 +25,7 @@
         android:layout_marginBottom="8dp"
         android:text="POWERED BY"
         android:textColor="@color/black"
-        android:textSize="12sp"
+        android:textSize="15sp"
         android:textStyle="bold"
         app:layout_constraintBottom_toTopOf="@+id/textView8"
         app:layout_constraintEnd_toEndOf="parent"
@@ -51,7 +51,7 @@
         android:layout_marginBottom="16dp"
         android:text="@string/company_name"
         android:textColor="#6B4F4F"
-        android:textSize="10sp"
+        android:textSize="14sp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="@+id/textView7"
         app:layout_constraintStart_toStartOf="@+id/textView7" />
