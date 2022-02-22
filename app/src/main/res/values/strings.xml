@@ -11,4 +11,11 @@
     <string name="company_name">Netcom Computers Private Limited</string>
     <!-- TODO: Remove or change this placeholder text -->
     <string name="hello_blank_fragment">Hello blank fragment</string>
+
+
+
+<!--  ImageLoaderLib:    https://github.com/nostra13/Android-Universal-Image-Loader          -->
+
+<!--    https://icons.veryicon.com/png/o/education-technology/alibaba-big-data-oneui/image-loading-failed-01.png            -->
+<!--    https://www.trroofingsheets.co.uk/wp-content/uploads/2016/05/default-no-image-1.png                 -->
 </resources>

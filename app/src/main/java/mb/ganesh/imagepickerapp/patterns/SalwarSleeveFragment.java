@@ -31,13 +31,13 @@ public class SalwarSleeveFragment extends Fragment {
         View view =  inflater.inflate(R.layout.fragment_work_blouse, container, false);
         crl = getArguments() != null ? getArguments().getString("colorCode") : null;
         recyclerView = view.findViewById(R.id.recyclerViewBPId);
+        // new
         recyclerView.setHasFixedSize(true);
         recyclerView.setItemViewCacheSize(20);
         recyclerView.setDrawingCacheEnabled(true);
         recyclerView.setDrawingCacheQuality(View.DRAWING_CACHE_QUALITY_HIGH);
-
         recyclerView.setLayoutManager(new GridLayoutManager(getContext() , 3));
-        loadPatterns("/Patterns/SSPatterns/");  // change path
+        loadPatterns("/Patterns/SALWAR/SPatterns/");  // change path
         return  view;
     }
     private void loadPatterns(String path) {

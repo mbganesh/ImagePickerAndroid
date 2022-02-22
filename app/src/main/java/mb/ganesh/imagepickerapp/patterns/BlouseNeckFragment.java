@@ -40,7 +40,7 @@ public class BlouseNeckFragment extends Fragment {
         recyclerView.setDrawingCacheQuality(View.DRAWING_CACHE_QUALITY_HIGH);
 
         recyclerView.setLayoutManager(new GridLayoutManager(getContext() , 3));
-        loadPatterns("/Patterns/BNPatterns/"); // change path
+        loadPatterns("/Patterns/BLOUSE/NPatterns/"); // change path
         return  view;
     }
 
@@ -49,6 +49,5 @@ public class BlouseNeckFragment extends Fragment {
         adapter = new MyRecyclerViewAdapter(getContext(), loadPatterns.loadPatternss(path) , crl);
         adapter.setHasStableIds(true);          // new
         recyclerView.setAdapter(adapter);
-
     }
 }

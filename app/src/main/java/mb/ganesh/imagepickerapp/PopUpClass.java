@@ -36,13 +36,12 @@ public class PopUpClass {
         AppCompatDelegate.setDefaultNightMode(AppCompatDelegate.MODE_NIGHT_NO);
 
 
-//        int width = 900;
-//        int height = 1200;
+        int width = 900;
+        int height = 1200;
 
-        int width = 700;
-        int height = 850;
+//        int width = 700;
+//        int height = 850;
 
-        
         boolean focusable = true;
         final PopupWindow popupWindow = new PopupWindow(popupView, width, height, focusable);
         popupWindow.showAtLocation(view, Gravity.CENTER, 0, 0);
