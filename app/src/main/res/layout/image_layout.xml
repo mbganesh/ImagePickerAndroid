@@ -45,9 +45,9 @@
 
             <ImageView
                 android:id="@+id/myImage"
-                android:layout_width="match_parent"
+                android:layout_width="250dp"
                 android:scaleType="fitXY"
-                android:layout_height="300dp"
+                android:layout_height="250dp"
                 app:layout_constraintBottom_toTopOf="@+id/myPrice"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintStart_toStartOf="parent"
