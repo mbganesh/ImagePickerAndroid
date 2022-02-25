@@ -6,22 +6,15 @@ import androidx.fragment.app.Fragment;
 import androidx.recyclerview.widget.GridLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
 
-import android.os.Environment;
-import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
-
-import java.io.File;
-import java.io.FilenameFilter;
 
 import mb.ganesh.imagepickerapp.MyRecyclerViewAdapter;
 import mb.ganesh.imagepickerapp.R;
 
 
-public class SalwarNeckFragment extends Fragment {
-
-    //    Salwar Neck
+public class WorkBlousePatternFragment extends Fragment {
 
     RecyclerView recyclerView;
     MyRecyclerViewAdapter adapter;
@@ -30,7 +23,7 @@ public class SalwarNeckFragment extends Fragment {
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
-        View view =  inflater.inflate(R.layout.fragment_work_blouse, container, false);
+        View view =  inflater.inflate(R.layout.pattern_fragment_layout, container, false);
         crl = getArguments() != null ? getArguments().getString("colorCode") : null;
         recyclerView = view.findViewById(R.id.recyclerViewBPId);
         // new
@@ -38,9 +31,8 @@ public class SalwarNeckFragment extends Fragment {
         recyclerView.setItemViewCacheSize(20);
         recyclerView.setDrawingCacheEnabled(true);
         recyclerView.setDrawingCacheQuality(View.DRAWING_CACHE_QUALITY_HIGH);
-
         recyclerView.setLayoutManager(new GridLayoutManager(getContext() , 3));
-        loadPatterns("/Patterns/SALWAR/NPatterns/"); // change path
+        loadPatterns("/Patterns/WORKBLOUSE/");       // change path
         return  view;
     }
 
@@ -50,3 +42,4 @@ public class SalwarNeckFragment extends Fragment {
         recyclerView.setAdapter(adapter);
     }
 }
+

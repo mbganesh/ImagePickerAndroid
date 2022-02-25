@@ -35,12 +35,11 @@ public class PopUpClass {
         View popupView = inflater.inflate(R.layout.pop_up_layout, null);
         AppCompatDelegate.setDefaultNightMode(AppCompatDelegate.MODE_NIGHT_NO);
 
+//        int width = 1000;
+//        int height = 1400;
 
-        int width = 1000;
-        int height = 1400;
-
-//        int width = 700;
-//        int height = 850;
+        int width = 700;
+        int height = 850;
 
         boolean focusable = true;
         final PopupWindow popupWindow = new PopupWindow(popupView, width, height, focusable);

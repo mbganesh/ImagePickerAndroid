@@ -3,8 +3,6 @@ package mb.ganesh.imagepickerapp;
 import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.appcompat.app.AppCompatDelegate;
-import androidx.browser.customtabs.CustomTabsIntent;
-import androidx.core.content.ContextCompat;
 import androidx.fragment.app.Fragment;
 
 import android.content.Intent;
@@ -20,24 +18,24 @@ import android.widget.TextView;
 import com.google.android.material.bottomnavigation.BottomNavigationView;
 import com.google.android.material.navigation.NavigationBarView;
 
-import mb.ganesh.imagepickerapp.patterns.BlouseNeckFragment;
-import mb.ganesh.imagepickerapp.patterns.BlouseSleeveFragment;
-import mb.ganesh.imagepickerapp.patterns.SalwarNeckFragment;
-import mb.ganesh.imagepickerapp.patterns.SalwarSleeveFragment;
-import mb.ganesh.imagepickerapp.patterns.WorkBlouseFragment;
+import mb.ganesh.imagepickerapp.patterns.BlousePatternFragment;
+import mb.ganesh.imagepickerapp.patterns.SalwarPatternFragment;
+import mb.ganesh.imagepickerapp.patterns.TopNewPatternFragment;
+import mb.ganesh.imagepickerapp.patterns.WorkBlousePatternFragment;
 
 
 public class MainActivity extends AppCompatActivity {
 
     BottomNavigationView bottomNavigationView;
     TextView powerBy;
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         AppCompatDelegate.setDefaultNightMode(AppCompatDelegate.MODE_NIGHT_NO);
 
         requestWindowFeature(Window.FEATURE_NO_TITLE);
-        this.getWindow().setFlags(WindowManager.LayoutParams.FLAG_FULLSCREEN,WindowManager.LayoutParams.FLAG_FULLSCREEN);
+        this.getWindow().setFlags(WindowManager.LayoutParams.FLAG_FULLSCREEN, WindowManager.LayoutParams.FLAG_FULLSCREEN);
 
         setContentView(R.layout.activity_main);
 
@@ -53,10 +51,6 @@ public class MainActivity extends AppCompatActivity {
                 Intent i = new Intent(Intent.ACTION_VIEW);
                 i.setData(Uri.parse(url));
                 startActivity(i);
-
-//                CustomTabsIntent.Builder builder = new CustomTabsIntent.Builder();
-//                CustomTabsIntent customTabsIntent = builder.build();
-//                customTabsIntent.launchUrl(MainActivity.this, Uri.parse("http://ncpli.com/"));
             }
         });
 
@@ -68,36 +62,29 @@ public class MainActivity extends AppCompatActivity {
                 Fragment fragment = null;
                 Bundle bundle = new Bundle();
                 switch (item.getItemId()) {
-                    case R.id.b_nav_salwar_neck:
+                    case R.id.b_nav_salwar_pattern:
                         bundle.putString("colorCode", "#B52B65");       // init load color
-                        fragment = new SalwarNeckFragment();
+                        fragment = new SalwarPatternFragment();
                         fragment.setArguments(bundle);
                         break;
 
-                    case R.id.b_nav_salwar_sleeve:
-                        bundle.putString("colorCode", "#3E497A");       // init load color
-                        fragment = new SalwarSleeveFragment();
-                        fragment.setArguments(bundle);
-                        break;
-
-                    case R.id.b_nav_blouse_neck:
+                    case R.id.b_nav_blouse_pattern:
                         bundle.putString("colorCode", "#1572A1");       // init load color
-                        fragment = new BlouseNeckFragment();
+                        fragment = new BlousePatternFragment();
                         fragment.setArguments(bundle);
                         break;
 
-                    case R.id.b_nav_blouse_sleeve:
-                        bundle.putString("colorCode", "#DD4A48");       // init load color
-                        fragment = new BlouseSleeveFragment();
-                        fragment.setArguments(bundle);
-                        break;
-
-                    case R.id.b_nav_work_blouse:
+                    case R.id.b_nav_workblouse_pattern:
                         bundle.putString("colorCode", "#9153F4");       // init load color
-                        fragment = new WorkBlouseFragment();
+                        fragment = new WorkBlousePatternFragment();
                         fragment.setArguments(bundle);
                         break;
 
+                    case R.id.b_nav_topnew_pattern:
+                        bundle.putString("colorCode", "#3E497A");       // init load color
+                        fragment = new TopNewPatternFragment();
+                        fragment.setArguments(bundle);
+                        break;
                 }
                 getSupportFragmentManager().beginTransaction().replace(R.id.frameLayout, fragment).commit();
                 return true; // return true;

@@ -4,12 +4,13 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background="#fff"
-    tools:context=".patterns.WorkBlouseFragment">
+    tools:context=".patterns.WorkBlousePatternFragment">
 
     <androidx.recyclerview.widget.RecyclerView
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         tools:listitem="@layout/image_layout"
+
         android:id="@+id/recyclerViewBPId"/>
 
 </FrameLayout>

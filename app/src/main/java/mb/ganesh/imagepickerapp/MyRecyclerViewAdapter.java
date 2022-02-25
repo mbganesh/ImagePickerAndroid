@@ -68,7 +68,7 @@ public class MyRecyclerViewAdapter extends RecyclerView.Adapter<MyRecyclerViewAd
             String string = allFiles[position].toString();
             Log.e("XXAdapter" , string);
             String[] parts = string.split("/");
-            String titleWithExt = parts[7];                     //  extra path add one*
+            String titleWithExt = parts[6];                     //  extra path add one*     or sub one*
             String[] titleTemp = titleWithExt.split("\\.");
             String[] title = titleTemp[0].split("-");
 
@@ -116,7 +116,7 @@ public class MyRecyclerViewAdapter extends RecyclerView.Adapter<MyRecyclerViewAd
                     Bitmap bmImgTemp = BitmapFactory.decodeFile(allFiles[position].toString());
                     String string = allFiles[position].toString();
                     String[] parts = string.split("/");
-                    String titleWithExt = parts[7];
+                    String titleWithExt = parts[6];
                     String[] title = titleWithExt.split("\\.");
 
                     PopUpClass popUpClass = new PopUpClass(bmImgTemp, title[0], crl);

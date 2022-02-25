@@ -1,8 +1,6 @@
 package mb.ganesh.imagepickerapp.patterns;
 
 import android.os.Bundle;
-import android.os.Environment;
-import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -11,15 +9,12 @@ import androidx.fragment.app.Fragment;
 import androidx.recyclerview.widget.GridLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
 
-import java.io.File;
-import java.io.FilenameFilter;
-
 import mb.ganesh.imagepickerapp.MyRecyclerViewAdapter;
 import mb.ganesh.imagepickerapp.R;
 
-public class BlouseSleeveFragment extends Fragment {
+public class BlousePatternFragment extends Fragment {
 
-    //    Blouse Sleeve
+    //    Blouse Neck
 
     RecyclerView recyclerView;
     MyRecyclerViewAdapter adapter;
@@ -28,11 +23,11 @@ public class BlouseSleeveFragment extends Fragment {
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
-        View view =  inflater.inflate(R.layout.fragment_work_blouse, container, false);
+        View view =  inflater.inflate(R.layout.pattern_fragment_layout, container, false);
 
         crl = getArguments() != null ? getArguments().getString("colorCode") : null;
-        recyclerView = view.findViewById(R.id.recyclerViewBPId);
 
+        recyclerView = view.findViewById(R.id.recyclerViewBPId);
         // new
         recyclerView.setHasFixedSize(true);
         recyclerView.setItemViewCacheSize(20);
@@ -40,12 +35,14 @@ public class BlouseSleeveFragment extends Fragment {
         recyclerView.setDrawingCacheQuality(View.DRAWING_CACHE_QUALITY_HIGH);
 
         recyclerView.setLayoutManager(new GridLayoutManager(getContext() , 3));
-        loadPatterns("/Patterns/BLOUSE/SPatterns/"); // change path
+        loadPatterns("/Patterns/BLOUSE/"); // change path
         return  view;
     }
+
     private void loadPatterns(String path) {
         LoadPatterns loadPatterns = new LoadPatterns();
         adapter = new MyRecyclerViewAdapter(getContext(), loadPatterns.loadPatternss(path) , crl);
+        adapter.setHasStableIds(true);          // new
         recyclerView.setAdapter(adapter);
     }
 }
