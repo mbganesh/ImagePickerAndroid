@@ -7,7 +7,7 @@
     android:layout_margin="3dp">
 
     <com.google.android.material.card.MaterialCardView
-        android:layout_width="255dp"
+        android:layout_width="300dp"
         android:layout_height="wrap_content"
         android:clickable="true"
         android:id="@+id/myCard"
@@ -43,8 +43,9 @@
 
             <ImageView
                 android:id="@+id/myImage"
-                android:layout_width="255dp"
+                android:layout_width="300dp"
                 android:scaleType="fitXY"
+                android:src="@drawable/loading_icon"
                 android:layout_height="200dp"
                 app:layout_constraintBottom_toTopOf="@+id/myPrice"
                 app:layout_constraintEnd_toEndOf="parent"

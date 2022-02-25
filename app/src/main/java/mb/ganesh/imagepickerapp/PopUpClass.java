@@ -10,6 +10,7 @@ import android.view.LayoutInflater;
 import android.view.MotionEvent;
 import android.view.ScaleGestureDetector;
 import android.view.View;
+import android.view.ViewGroup;
 import android.widget.ImageView;
 import android.widget.PopupWindow;
 import android.widget.TextView;
@@ -35,11 +36,17 @@ public class PopUpClass {
         View popupView = inflater.inflate(R.layout.pop_up_layout, null);
         AppCompatDelegate.setDefaultNightMode(AppCompatDelegate.MODE_NIGHT_NO);
 
+// for client
 //        int width = 1000;
 //        int height = 1400;
 
-        int width = 700;
-        int height = 850;
+//  for office
+//        int width = 700;
+//        int height = 850;
+
+//  for lan
+        int width = ViewGroup.LayoutParams.MATCH_PARENT;  //700;
+        int height = ViewGroup.LayoutParams.MATCH_PARENT;  //600;
 
         boolean focusable = true;
         final PopupWindow popupWindow = new PopupWindow(popupView, width, height, focusable);
@@ -51,8 +58,6 @@ public class PopUpClass {
 
         ZoomageView imageView = popupView.findViewById(R.id.popUpImage) ;
         imageView.setImageBitmap(bitmap);
-
-//        imageView.setImageURI(Uri.parse("http://localhost:3000/static/media/report.bd3e931a.png"));
 
         String[] titles = title.split("-");
 

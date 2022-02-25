@@ -58,15 +58,15 @@ public class MyRecyclerViewAdapter extends RecyclerView.Adapter<MyRecyclerViewAd
     @Override
     public void onBindViewHolder(@NonNull MyViewHolder holder, int position) {
 
+
+
         try{
             imageLoader.init(ImageLoaderConfiguration.createDefault(context));
 
             if (crl == null) {
                 crl = "#FF0075";
             }
-
             String string = allFiles[position].toString();
-            Log.e("XXAdapter" , string);
             String[] parts = string.split("/");
             String titleWithExt = parts[6];                     //  extra path add one*     or sub one*
             String[] titleTemp = titleWithExt.split("\\.");
@@ -83,24 +83,24 @@ public class MyRecyclerViewAdapter extends RecyclerView.Adapter<MyRecyclerViewAd
             imageLoader.displayImage("file://"+allFiles[position].toString(), holder.myImage,  new ImageLoadingListener() {         // file://
                 @Override
                 public void onLoadingStarted(String imageUri, View view) {
-                    Log.e("onLoading", "Loading...");
+//                    Log.e("onLoading", "Loading...");
                 }
 
                 @Override
                 public void onLoadingFailed(String imageUri, View view, FailReason failReason) {
-                    Log.e("onLoadingFailed", "onLoadingFailed...");
+//                    Log.e("onLoadingFailed", "onLoadingFailed...");
                 }
 
                 @Override
                 public void onLoadingComplete(String imageUri, View view, Bitmap loadedImage) {
-                    Log.e("onLoadingComplete", "onLoadingComplete...");
-                    Log.e("imageUri", imageUri);        // file://
+//                    Log.e("onLoadingComplete", "onLoadingComplete...");
+//                    Log.e("imageUri", imageUri);        // file://
 
                 }
 
                 @Override
                 public void onLoadingCancelled(String imageUri, View view) {
-                    Log.e("onLoadingCancelled", "onLoadingCancelled...");
+//                    Log.e("onLoadingCancelled", "onLoadingCancelled...");
                 }
             });
         }catch (Exception e){

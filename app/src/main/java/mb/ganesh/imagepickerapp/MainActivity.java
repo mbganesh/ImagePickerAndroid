@@ -1,5 +1,6 @@
 package mb.ganesh.imagepickerapp;
 
+
 import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.appcompat.app.AppCompatDelegate;
@@ -9,6 +10,7 @@ import android.content.Intent;
 import android.net.Uri;
 import android.os.Bundle;
 import android.text.Html;
+import android.util.Log;
 import android.view.MenuItem;
 import android.view.View;
 import android.view.Window;
@@ -25,13 +27,14 @@ import mb.ganesh.imagepickerapp.patterns.WorkBlousePatternFragment;
 
 
 public class MainActivity extends AppCompatActivity {
-
+    private static final String TAG = "MAINAC";
     BottomNavigationView bottomNavigationView;
     TextView powerBy;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
+        Log.e(TAG, "onCreate() called");
         AppCompatDelegate.setDefaultNightMode(AppCompatDelegate.MODE_NIGHT_NO);
 
         requestWindowFeature(Window.FEATURE_NO_TITLE);
@@ -90,5 +93,12 @@ public class MainActivity extends AppCompatActivity {
                 return true; // return true;
             }
         });
+    }
+
+
+    @Override
+    public void onSaveInstanceState(@NonNull Bundle outState) {
+        super.onSaveInstanceState(outState);
+        Log.e(TAG, "onSaveInstanceState() called");
     }
 }

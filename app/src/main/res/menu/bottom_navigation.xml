@@ -16,7 +16,7 @@
 <!--    topnew  -->
     <item android:id="@+id/b_nav_topnew_pattern"
         android:title="Top New Patterns"
-        android:icon="@drawable/ic_satrt"/>
+        android:icon="@drawable/ic_star"/>
 
 <!--    <item android:id="@+id/b_nav_work_blouse"-->
 <!--        android:title="Work Blouse Patterns"-->
