@@ -20,9 +20,12 @@ import android.widget.TextView;
 import com.google.android.material.bottomnavigation.BottomNavigationView;
 import com.google.android.material.navigation.NavigationBarView;
 
+import mb.ganesh.imagepickerapp.patterns.AllTopPatternsFragment;
 import mb.ganesh.imagepickerapp.patterns.BlousePatternFragment;
 import mb.ganesh.imagepickerapp.patterns.SalwarPatternFragment;
-import mb.ganesh.imagepickerapp.patterns.TopNewPatternFragment;
+import mb.ganesh.imagepickerapp.patterns.TopBlousePatternFragment;
+import mb.ganesh.imagepickerapp.patterns.TopSalwarPatternFragment;
+import mb.ganesh.imagepickerapp.patterns.TopWorkBlousePatternFragment;
 import mb.ganesh.imagepickerapp.patterns.WorkBlousePatternFragment;
 
 
@@ -83,11 +86,29 @@ public class MainActivity extends AppCompatActivity {
                         fragment.setArguments(bundle);
                         break;
 
-                    case R.id.b_nav_topnew_pattern:
+                    case R.id.b_nav_top_salwar_pattern:
+
+//                        bundle.putString("colorCode", "#3E497A");       // init load color
+//                        fragment = new TopSalwarPatternFragment();
+//                        fragment.setArguments(bundle);
+
                         bundle.putString("colorCode", "#3E497A");       // init load color
-                        fragment = new TopNewPatternFragment();
+                        fragment = new AllTopPatternsFragment();
                         fragment.setArguments(bundle);
+
                         break;
+
+//                    case R.id.b_nav_top_blouse_pattern:
+//                        bundle.putString("colorCode", "#3E497A");       // init load color
+//                        fragment = new TopBlousePatternFragment();
+//                        fragment.setArguments(bundle);
+//                        break;
+//
+//                    case R.id.b_nav_top_workblouse_pattern:
+//                        bundle.putString("colorCode", "#3E497A");       // init load color
+//                        fragment = new TopWorkBlousePatternFragment();
+//                        fragment.setArguments(bundle);
+//                        break;
                 }
                 getSupportFragmentManager().beginTransaction().replace(R.id.frameLayout, fragment).commit();
                 return true; // return true;

@@ -23,17 +23,30 @@
         android:name="mb.ganesh.imagepickerapp.patterns.WorkBlousePatternFragment"
         android:label="Work Blouse Patterns"
         tools:layout="@layout/pattern_fragment_layout" />
-<!--    top new-->
+
+<!--    top salwar-->
     <fragment
-        android:id="@+id/tn_fragment"
-        android:name="mb.ganesh.imagepickerapp.patterns.TopNewPatternFragment"
-        android:label="Top New Patterns"
+        android:id="@+id/ts_fragment"
+        android:name="mb.ganesh.imagepickerapp.patterns.TopSalwarPatternFragment"
+        android:label="Top Salwar Patterns"
         tools:layout="@layout/pattern_fragment_layout" />
 
+<!--    &lt;!&ndash;    top Blouse&ndash;&gt;-->
 <!--    <fragment-->
-<!--        android:id="@+id/wb_fragment"-->
-<!--        android:name="mb.ganesh.imagepickerapp.patterns.WorkBlousePatternFragment"-->
-<!--        android:label="Work Blouse Patterns"-->
-<!--        tools:layout="@layout/fragment_work_blouse" />-->
+<!--        android:id="@+id/tb_fragment"-->
+<!--        android:name="mb.ganesh.imagepickerapp.patterns.TopBlousePatternFragment"-->
+<!--        android:label="Top Blouse Patterns"-->
+<!--        tools:layout="@layout/pattern_fragment_layout" />-->
+
+<!--    &lt;!&ndash;    top salwar&ndash;&gt;-->
+<!--    <fragment-->
+<!--        android:id="@+id/twb_fragment"-->
+<!--        android:name="mb.ganesh.imagepickerapp.patterns.TopWorkBlousePatternFragment"-->
+<!--        android:label="Top Work Blouse Patterns"-->
+<!--        tools:layout="@layout/pattern_fragment_layout" />-->
+
+
+
+
 
 </navigation>

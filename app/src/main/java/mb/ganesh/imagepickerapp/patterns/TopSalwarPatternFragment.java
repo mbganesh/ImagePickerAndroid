@@ -17,10 +17,9 @@ import com.google.android.material.card.MaterialCardView;
 import mb.ganesh.imagepickerapp.MyRecyclerViewAdapter;
 import mb.ganesh.imagepickerapp.R;
 
-public class TopNewPatternFragment extends Fragment {
-    private static final String TAG = "TOPNEWPATTERN";
+public class TopSalwarPatternFragment extends Fragment {
 
-    //    Salwar Sleeve
+    //   Top Salwar
 
     RecyclerView recyclerView;
     MyRecyclerViewAdapter adapter;
@@ -31,7 +30,6 @@ public class TopNewPatternFragment extends Fragment {
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
-        Log.e(TAG, "onCreateView() called");
         View view =  inflater.inflate(R.layout.pattern_fragment_layout, container, false);
         crl = getArguments() != null ? getArguments().getString("colorCode") : null;
         recyclerView = view.findViewById(R.id.recyclerViewBPId);
@@ -49,7 +47,7 @@ public class TopNewPatternFragment extends Fragment {
         } else  {
             recyclerView.setLayoutManager(new GridLayoutManager(getContext() , 4));
         }
-        loadPatterns("/Patterns/TOPNEW/");  // change path
+        loadPatterns("/Patterns/TOPSALWAR/");  // change path
         return  view;
     }
     private void loadPatterns(String path) {
@@ -70,7 +68,6 @@ public class TopNewPatternFragment extends Fragment {
     @Override
     public void onConfigurationChanged(@NonNull Configuration newConfig) {
         super.onConfigurationChanged(newConfig);
-        Log.e(TAG, "onConfigurationChanged() called");
         if (getResources().getConfiguration().orientation == Configuration.ORIENTATION_PORTRAIT) {
             recyclerView.setLayoutManager(new GridLayoutManager(getContext() , 3));
         } else  {

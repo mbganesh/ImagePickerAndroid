@@ -13,13 +13,22 @@
     <item android:id="@+id/b_nav_workblouse_pattern"
         android:title="Work Blouse Patterns"
         android:icon="@drawable/ic_neck_nav"/>
-<!--    topnew  -->
-    <item android:id="@+id/b_nav_topnew_pattern"
-        android:title="Top New Patterns"
+
+<!--    all new patterns-->
+
+<!--    Top_salwar  -->
+    <item android:id="@+id/b_nav_top_salwar_pattern"
+        android:title="Top Salwar Patterns"
         android:icon="@drawable/ic_star"/>
 
-<!--    <item android:id="@+id/b_nav_work_blouse"-->
-<!--        android:title="Work Blouse Patterns"-->
-<!--        android:icon="@drawable/ic_work_blouse_nav"/>-->
+<!--    &lt;!&ndash;    Top_blouse  &ndash;&gt;-->
+<!--    <item android:id="@+id/b_nav_top_blouse_pattern"-->
+<!--        android:title="Top Blouse Patterns"-->
+<!--        android:icon="@drawable/ic_star"/>-->
+
+<!--    &lt;!&ndash;    Top_work_blouse  &ndash;&gt;-->
+<!--    <item android:id="@+id/b_nav_top_workblouse_pattern"-->
+<!--        android:title="Top Work Blouse Patterns"-->
+<!--        android:icon="@drawable/ic_star"/>-->
 
 </menu>

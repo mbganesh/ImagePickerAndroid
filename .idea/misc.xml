@@ -10,16 +10,21 @@
         <entry key="..\:/Users/Administrator/AndroidStudioProjects/ImagePickerApp/app/src/main/res/drawable/ic_neck_nav.xml" value="0.37083333333333335" />
         <entry key="..\:/Users/Administrator/AndroidStudioProjects/ImagePickerApp/app/src/main/res/drawable/ic_satrt.xml" value="0.37083333333333335" />
         <entry key="..\:/Users/Administrator/AndroidStudioProjects/ImagePickerApp/app/src/main/res/drawable/ic_sleeve_nav.xml" value="0.37083333333333335" />
+        <entry key="..\:/Users/Administrator/AndroidStudioProjects/ImagePickerApp/app/src/main/res/layout/activity_all_top_new.xml" value="0.17083333333333334" />
         <entry key="..\:/Users/Administrator/AndroidStudioProjects/ImagePickerApp/app/src/main/res/layout/activity_browse_picture2.xml" value="0.19739583333333333" />
         <entry key="..\:/Users/Administrator/AndroidStudioProjects/ImagePickerApp/app/src/main/res/layout/activity_main.xml" value="0.16" />
         <entry key="..\:/Users/Administrator/AndroidStudioProjects/ImagePickerApp/app/src/main/res/layout/activity_splash.xml" value="0.22" />
         <entry key="..\:/Users/Administrator/AndroidStudioProjects/ImagePickerApp/app/src/main/res/layout/activity_splash2.xml" value="0.3546875" />
+        <entry key="..\:/Users/Administrator/AndroidStudioProjects/ImagePickerApp/app/src/main/res/layout/fragment_all_top_new.xml" value="0.17083333333333334" />
+        <entry key="..\:/Users/Administrator/AndroidStudioProjects/ImagePickerApp/app/src/main/res/layout/fragment_all_top_patterns.xml" value="0.17083333333333334" />
         <entry key="..\:/Users/Administrator/AndroidStudioProjects/ImagePickerApp/app/src/main/res/layout/fragment_blouse.xml" value="0.11" />
         <entry key="..\:/Users/Administrator/AndroidStudioProjects/ImagePickerApp/app/src/main/res/layout/fragment_first.xml" value="0.3546875" />
         <entry key="..\:/Users/Administrator/AndroidStudioProjects/ImagePickerApp/app/src/main/res/layout/fragment_neck.xml" value="0.19739583333333333" />
         <entry key="..\:/Users/Administrator/AndroidStudioProjects/ImagePickerApp/app/src/main/res/layout/fragment_salwar.xml" value="0.19739583333333333" />
         <entry key="..\:/Users/Administrator/AndroidStudioProjects/ImagePickerApp/app/src/main/res/layout/fragment_salwar_neck.xml" value="0.340625" />
         <entry key="..\:/Users/Administrator/AndroidStudioProjects/ImagePickerApp/app/src/main/res/layout/fragment_sleeve.xml" value="0.22" />
+        <entry key="..\:/Users/Administrator/AndroidStudioProjects/ImagePickerApp/app/src/main/res/layout/fragment_top_blouse_pattern.xml" value="0.3546875" />
+        <entry key="..\:/Users/Administrator/AndroidStudioProjects/ImagePickerApp/app/src/main/res/layout/fragment_top_work_blouse_pattern.xml" value="0.3546875" />
         <entry key="..\:/Users/Administrator/AndroidStudioProjects/ImagePickerApp/app/src/main/res/layout/fragment_work_blouse.xml" value="0.22" />
         <entry key="..\:/Users/Administrator/AndroidStudioProjects/ImagePickerApp/app/src/main/res/layout/image_layout.xml" value="0.18" />
         <entry key="..\:/Users/Administrator/AndroidStudioProjects/ImagePickerApp/app/src/main/res/layout/pattern_fragment_layout.xml" value="0.2" />
